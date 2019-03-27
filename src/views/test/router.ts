@@ -1,14 +1,13 @@
-declare var require: (filename, resolve) => any
-
 let router: any[] = [
   {
     path: "/",
-    redirect: { name: "loginIndex" }
+    redirect: { name: "home" }
   },
   {
-    name: "loginIndex",
-    path: "/loginIndex",
-    component: (() => import("./components/RouterLazy.vue")) as any
+    name: "home",
+    path: "/home",
+    component: (reslove: any) =>
+      require.ensure([], () => reslove(require("./views/Home/home.vue")))
   }
 ]
 
