@@ -22,6 +22,7 @@ buildNumber.properties
 *.ipr
 *.iws
 .idea
+.vscode
 out
 test-output
 atlassian-ide-plugin.xml
@@ -68,6 +69,7 @@ gradle-app.setting
 build/
 doc/
 .sonar_lock
+node_modules/
 
 # 苹果机器的内部管理文件
 *~
